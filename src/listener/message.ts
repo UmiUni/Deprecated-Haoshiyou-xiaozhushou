@@ -365,6 +365,7 @@ let maybeCreateUser = async function(m:Message):Promise<string /*userId*/ > {
 };
 
 let maybeAdminCommand = async function(m:Message) {
+  logger.info(`管理员${WeChatyApiX.contactToStringLong(m.from())} says a command 状态.`);
   if (WeChatyApiX.isTalkingToMePrivately(m) && await HsyUtil.isHsyAdmin(m.from())) {
     let admin = m.from();
     if (/状态/.test(m.content())) {
