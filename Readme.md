@@ -67,3 +67,16 @@ Or http://haoshiyou-server-dev.herokuapp.com/api/HsyListings?filter={%22where%22
   - [X] Hot reload typescript
   - [X] Refactor the code to split each event handler into a separate file
 
+  apt install npm
+
+  npm install -g typescript
+  npm install -g ts-node
+
+
+  ts-node src/main.ts
+
+  npm install log4ts
+
+  tsc -v
+
+

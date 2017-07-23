@@ -107,6 +107,7 @@ let saveImgFileFromMsg = async function(message: Message):Promise<any> {
  *   (and should not be processed anymore)
  */
 let maybeBlacklistUser = async function(m: Message):Promise<Boolean> {
+  logger.debug('寻找mentionName = ${m.from()}');
   if (! await HsyUtil.isHsyAdmin(m.from())) {
     return false; // Not an admin
   }
